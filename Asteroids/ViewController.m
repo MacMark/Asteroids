@@ -68,7 +68,7 @@
     
     NSString *urlStringWithDistance = nil;
     urlStringWithDistance = [urlString stringByReplacingOccurrencesOfString:@"MAX" withString:[maxDistance description]];
-    urlStringWithDistance = [urlString stringByReplacingOccurrencesOfString:@"MIN" withString:[minDistance description]];
+    urlStringWithDistance = [urlStringWithDistance stringByReplacingOccurrencesOfString:@"MIN" withString:[minDistance description]];
     
     NSString *urlEscapedString = [urlStringWithDistance stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
