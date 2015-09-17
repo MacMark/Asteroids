@@ -59,6 +59,7 @@
 - (void)updateAsteroidsWithMinimumDistance:(NSNumber *)minDistance maximumDistance:(NSNumber *)maxDistance {
     
     if (maxDistance.floatValue <= 0.0f) return;
+    if (minDistance.floatValue <= 0.0f) return;
     
     // Example URL
     // http://asterank.com/api/asterank?query={"closeness":{"$gt":3001.0}}&{"closeness":{"$lt":3010.0}}&limit=3
