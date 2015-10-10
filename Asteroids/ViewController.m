@@ -79,6 +79,11 @@
                                 NSURLResponse *response,
                                 NSError *error) {
                 
+                if (error) {
+                    NSLog(@"Network problem: %@", [error localizedDescription]);
+                    return;
+                }
+                
                 NSError *parsingError = nil;
                 id updatedAsteroids = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&parsingError];
                 
